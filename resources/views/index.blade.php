@@ -10,7 +10,7 @@
 <body>
     <div id="hook"></div>
     <script type="text/javascript">
-        const MYAPI_URL = "{{  url('/papi') }}";
+        const MYAPI_URL = "{{  url('/api') }}";
     </script>
     <script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
 </body>
