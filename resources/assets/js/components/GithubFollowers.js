@@ -37,7 +37,7 @@ export default class GithubFollowers  extends Component {
     getMoreFollowers(){
         axios.post(`${MYAPI_URL}/load_more_followers`, { 
                 page: this.state.followersPage + 1,
-                followersUrl: this.userData.followers_url
+                followersUrl: this.state.userData.followers_url
             })
             .then( (response) => {
                 this.setState({
@@ -46,7 +46,7 @@ export default class GithubFollowers  extends Component {
                 })
             })
             .catch( (error) => {
-
+                this.setState({error: 'there was an error with loading more followers'});
             })
     }
 
@@ -82,7 +82,7 @@ export default class GithubFollowers  extends Component {
         let html = followers.map( (follower, i) => {
             rendered++;
             return(
-                   <img src={follower.avatar_url} style={{width: '33%', float: 'left'}}/>
+                   <img key={follower.login} src={follower.avatar_url} style={{width: '20%', float: 'left', padding: '5px'}}/>
             ); 
         });
 

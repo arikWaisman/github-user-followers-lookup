@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 
 class GithubFollowersController extends Controller
