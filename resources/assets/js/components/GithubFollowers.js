@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import SearchBar from './SearchBar';
 import axios from 'axios';
 
-const MYAPI_URL = 'http://githubfollowers.test/api';
-
 export default class GithubFollowers  extends Component {
 
     constructor(props){
